@@ -42,6 +42,14 @@
         .faq-icon {
             @apply transition-all duration-300;
         }
+        .dashboard-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
     </style>
 </head>
 <body class="bg-white text-[#1A1A1A]">
@@ -123,7 +131,23 @@
                 </div>
                 <div class="relative">
                     <div class="absolute inset-0 bg-gradient-to-r from-[#FF5A5F]/20 to-[#FFD166]/20 rounded-3xl blur-2xl"></div>
-                    <img src="https://images.unsplash.com/photo-1677442d019cecf8d1b94b565e6b8e1b3b8c9d7e?w=600&h=600&fit=crop" alt="AI Automation Dashboard" class="relative rounded-3xl shadow-2xl w-full h-auto object-cover">
+                    <div class="relative rounded-3xl shadow-2xl w-full h-96 overflow-hidden dashboard-gradient flex items-center justify-center">
+                        <div class="w-full h-full relative">
+                            <div class="absolute inset-0 opacity-10">
+                                <div class="absolute top-4 left-4 w-32 h-24 dashboard-card rounded-lg"></div>
+                                <div class="absolute top-4 right-4 w-32 h-24 dashboard-card rounded-lg"></div>
+                                <div class="absolute bottom-4 left-1/4 w-40 h-20 dashboard-card rounded-lg"></div>
+                                <div class="absolute bottom-4 right-1/4 w-40 h-20 dashboard-card rounded-lg"></div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-chart-line text-white text-6xl mb-4 opacity-80"></i>
+                                    <p class="text-white text-xl font-semibold opacity-80">AI Dashboard</p>
+                                    <p class="text-white/60 text-sm mt-2">Realtime Analytics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -699,8 +723,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    
     <!-- Contact Form Section - Inline Minimal Layout -->
     <section id="contact" class="py-16 bg-white border-t border-gray-200">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
